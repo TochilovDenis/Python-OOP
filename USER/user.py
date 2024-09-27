@@ -2,10 +2,10 @@
 class User:
     # Конструктор параметризованный класса User
     def __init__(self, name, surname, patronymic, age):
-        self.name = ""  # создание и инициализация переменной name
-        self.surname = "" # создание и инициализация переменной surname
-        self.patronymic = "" # создание и инициализация переменной patronymic
-        self.age = 0    # # создание и инициализация переменной age
+        self.name = name  # создание и инициализация переменной name
+        self.surname = surname # создание и инициализация переменной surname
+        self.patronymic = patronymic # создание и инициализация переменной patronymic
+        self.age = age    # # создание и инициализация переменной age
 
     def __str__(self):
         return (f"Фамилия: {self.surname} | "
@@ -23,4 +23,5 @@ users = list()
 users.append(user)
 users.append(user1)
 
-print(users)
+for u in users:
+    print(u)
