@@ -25,9 +25,17 @@ user1 = User("Alex", "Smirnov", "Ivanovich", 37)
 # выводим на экран
 # print(user)
 
-users = list()
-users.append(user)
-users.append(user1)
+# Первый вариант
+users_list = UserList()
+users_list.users.append(user)
+users_list.users.append(user1)
+for u in users_list.users:
+    print(u)
 
-for u in users:
+# Второй вариант
+users_list = UserList().users
+users_list.append(user)
+users_list.append(user1)
+
+for u in users_list:
     print(u)
