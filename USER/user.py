@@ -7,9 +7,16 @@ class User:
         self.patronymic = "" # создание и инициализация переменной patronymic
         self.age = 0    # # создание и инициализация переменной age
 
+    def __str__(self):
+        return f"{self.surname} {self.surname}"
+
 user = User("Denis", "Tochilov", "Nikolaevich", 34)
 
+user.name = "Denis"  # присвоение переменной
+user.surname = "Tochilov"  # присвоение переменной
+user.patronymic = "Nikolaevich"  # присвоение переменной
+user.age = 34  # присвоение переменной
 user.new_attribute = "Это не существующий при создании класса аттрибут теперь там существует"
 
 # выводим на экран
-print(user, user.new_attribute)
+print(user)
