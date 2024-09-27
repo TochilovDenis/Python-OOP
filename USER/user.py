@@ -14,12 +14,13 @@ class User:
                 f"Возраст: {self.age}")
 
 user = User("Denis", "Tochilov", "Nikolaevich", 34)
-
-user.name = "Denis"  # присвоение переменной
-user.surname = "Tochilov"  # присвоение переменной
-user.patronymic = "Nikolaevich"  # присвоение переменной
-user.age = 34  # присвоение переменной
-user.new_attribute = "Это не существующий при создании класса аттрибут теперь там существует"
+user1 = User("Alex", "Smirnov", "Ivanovich", 37)
 
 # выводим на экран
-print(user)
+# print(user)
+
+users = list()
+users.append(user)
+users.append(user1)
+
+print(users)
