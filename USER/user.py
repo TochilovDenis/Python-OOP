@@ -8,7 +8,10 @@ class User:
         self.age = 0    # # создание и инициализация переменной age
 
     def __str__(self):
-        return f"{self.surname} {self.surname}"
+        return (f"Фамилия: {self.surname} | "
+                f"Имя: {self.name} | "
+                f"Отечество: {self.patronymic} | "
+                f"Возраст: {self.age}")
 
 user = User("Denis", "Tochilov", "Nikolaevich", 34)
 
