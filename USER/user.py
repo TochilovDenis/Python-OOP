@@ -13,6 +13,12 @@ class User:
                 f"Отечество: {self.patronymic} | "
                 f"Возраст: {self.age}")
 
+
+class UserList:
+    def __init__(self):
+        self.users = list()
+
+
 user = User("Denis", "Tochilov", "Nikolaevich", 34)
 user1 = User("Alex", "Smirnov", "Ivanovich", 37)
 
