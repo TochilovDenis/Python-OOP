@@ -16,6 +16,31 @@ class Apartment:
         return len(self.numberOfOccupants)
 
 
+class House:
+    def __init__(self, list_of_apartments, house_number, number_of_floors, number_of_entrances):
+        self.list_of_apartments = [] # список квартир
+        self.house_number = house_number # номер дома
+        self.number_of_floors = number_of_floors # количество этажей
+        self.number_of_entrances = number_of_entrances # количество подъездов
+
+    def __len__(self) -> int:
+        return len(self.list_of_apartments)
+
+    def __str__(self) -> str:
+        return (f"Дом №{self.house_number} |"
+                f" {self.number_of_entrances} подъезда |"
+                f" {self.number_of_floors} этажей |"
+                f" {self.list_of_apartments} квартир")
+
+    def add_apartment(self, a: Apartment):
+        self.list_of_apartments.append(a)
+
+
+    def print_all_apartment(self) -> None:
+        for a in self.list_of_apartments:
+            print(a)
+
+
 def get_random_apartment():
     return Apartment(randint(1, 5), randint(1,4), randint(1,9), randint(1, 36))
 
