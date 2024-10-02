@@ -18,10 +18,6 @@ class Apartment:
 def get_random_apartment():
     return Apartment(randint(1, 5), randint(1,4), randint(1,9), randint(1, 36))
 
-apartment = [get_random_apartment() for _ in range(10)]
-for ap in apartment:
-    print(ap)
-
 
 class House:
     def __init__(self, house_number, number_of_floors, number_of_entrances):
@@ -55,3 +51,12 @@ def get_random_house(amount_of_random_apartments: int = 0) -> House:
         house.add_apartment(get_random_apartment())
 
     return house
+
+if __name__ == '__main__':
+    # apartment = [get_random_apartment() for _ in range(10)]
+    # for ap in apartment:
+    #     print(ap)
+
+    houses: list[House] = [get_random_house() for _ in range(3)]
+    for house in houses:
+        print(house)
