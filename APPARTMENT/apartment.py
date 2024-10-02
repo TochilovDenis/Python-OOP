@@ -19,6 +19,6 @@ class Apartment:
 def get_random_apartment():
     return Apartment(randint(1, 5), randint(1,4), randint(1,9), randint(1, 36))
 
-
-ap = get_random_apartment()
-print(ap)
+apartment = [get_random_apartment() for _ in range(10)]
+for ap in apartment:
+    print(ap)
