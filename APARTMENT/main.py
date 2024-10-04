@@ -1,5 +1,5 @@
 from random import randint
-from house import get_random_house, House, get_random_house_id
+from house import get_random_house, House
 
 if __name__ == '__main__':
     # apartment = [get_random_apartment() for _ in range(10)]
@@ -11,5 +11,3 @@ if __name__ == '__main__':
         print(f"\nHouse {i}:")
         print(house)
         house.print_all_apartment()
-
-    print(get_random_house_id())
