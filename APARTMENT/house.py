@@ -23,7 +23,7 @@ class House:
 
     def print_all_apartment(self) -> None:
         if self.list_of_apartments:
-            for _, ap in self.list_of_apartments.items():
+            for ap in self.list_of_apartments.values():
                 print(f"{ap}")
         else:
             print("Нет квартир!")
