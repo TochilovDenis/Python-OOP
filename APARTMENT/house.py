@@ -33,3 +33,10 @@ def get_random_house(amount_of_random_apartments: int = 0) -> House:
         house.add_apartment(get_random_apartment())
 
     return house
+
+
+RUSSIAN_LETTERS = 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЭЮЯ'
+
+
+def get_random_house_id() -> str:
+    return str(randint(1, 100)) + choice(RUSSIAN_LETTERS)
