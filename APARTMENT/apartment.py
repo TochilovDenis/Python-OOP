@@ -16,7 +16,7 @@ class Apartment:
         return len(self.numberOfOccupants)
 
 def get_random_apartment():
-    return Apartment(randint(1, 5), randint(1,4), randint(1,9), randint(1, 36))
+    return Apartment(randint(1, 5), randint(1,4), randint(1,9), randint(1, 100))
 
 
 

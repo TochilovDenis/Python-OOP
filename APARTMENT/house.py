@@ -1,8 +1,9 @@
 from apartment import Apartment, randint, get_random_apartment
+from random import choice
 
 class House:
     def __init__(self, house_number, number_of_floors, number_of_entrances):
-        self.list_of_apartments = [] # список квартир
+        self.list_of_apartments: list[Apartment] = [] # список квартир
         self.house_number = house_number # номер дома
         self.number_of_floors = number_of_floors # количество этажей
         self.number_of_entrances = number_of_entrances # количество подъездов
@@ -14,7 +15,7 @@ class House:
         return (f"Дом №{self.house_number} |"
                 f" {self.number_of_entrances} подъезда |"
                 f" {self.number_of_floors} этажей |"
-                f" {self.list_of_apartments} квартир")
+                f" {len(self.list_of_apartments)} квартир")
 
     def add_apartment(self, a: Apartment):
         self.list_of_apartments.append(a)

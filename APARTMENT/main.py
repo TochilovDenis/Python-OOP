@@ -1,3 +1,4 @@
+from random import randint
 from house import get_random_house, House
 
 if __name__ == '__main__':
@@ -5,6 +6,8 @@ if __name__ == '__main__':
     # for ap in apartment:
     #     print(ap)
 
-    houses: list[House] = [get_random_house() for _ in range(3)]
-    for house in houses:
+    houses: list[House] = [get_random_house(randint(5, 15)) for _ in range(3)]
+    for i, house in enumerate(houses, 1):
+        print(f"\nHouse {i}:")
         print(house)
+        house.print_all_apartment()
